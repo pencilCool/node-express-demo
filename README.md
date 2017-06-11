@@ -7,3 +7,9 @@ run：
   npm install --save express
   npm install --save express3-handlebars
 ```
+
+发现代码更新，自动重启服务：
+
+```
+  npm install --save-dev nodemon
+```
