@@ -16,22 +16,22 @@ run：
 
 页面测试
 ```
-npm install --save-dev mocha
+  npm install --save-dev mocha
 ```
 
 添加断言
 
 ```
-npm install --save-dev chai
+  npm install --save-dev chai
 ```
 
 自动化测试
 
 ```
- npm install --save-dev zombie
+  npm install --save-dev zombie
 ```
 
 去毛
 ```
-npm install -g jshint
+  npm install -g jshint
 ```
