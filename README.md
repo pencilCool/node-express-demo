@@ -35,3 +35,14 @@ run：
 ```
   npm install -g jshint
 ```
+
+逻辑测 试、跨页测试、去毛和链接检查 整合 / 插件
+```
+  sudo npm install -g grunt-cli
+  npm install --save-dev grunt
+  
+  npm install --save-dev grunt-cafe-mocha
+  npm install --save-dev grunt-contrib-jshint
+  npm install --save-dev grunt-exec
+
+```
