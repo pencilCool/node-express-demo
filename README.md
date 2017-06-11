@@ -25,3 +25,8 @@ npm install --save-dev mocha
 npm install --save-dev chai
 ```
 
+自动化测试
+
+```
+ npm install --save-dev zombie
+```
