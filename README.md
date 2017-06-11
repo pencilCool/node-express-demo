@@ -13,3 +13,15 @@ run：
 ```
   npm install --save-dev nodemon
 ```
+
+页面测试
+```
+npm install --save-dev mocha
+```
+
+添加断言
+
+```
+npm install --save-dev chai
+```
+
