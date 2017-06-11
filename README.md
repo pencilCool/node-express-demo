@@ -30,3 +30,8 @@ npm install --save-dev chai
 ```
  npm install --save-dev zombie
 ```
+
+去毛
+```
+npm install -g jshint
+```
