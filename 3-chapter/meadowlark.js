@@ -1,31 +1,35 @@
 var express = require('express');
-var app = express()
+var app = express();
+
+//< 这段代码创建了一个视图引擎，并对 Express 进行了配置，将其作为默认的视图引擎
+var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+// >
+
+
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', function(req, res) {
-    res.type('text/plain');
-    res.send('Meadwlark Travel');
+    res.render('home');
 });
 
 app.get('/about', function(req, res) {
-    res.type('text/plain')
-    res.send('About Meadlark Travel');
+    res.render('about');
 });
 
 
-
+//再指定内容类型和状态码了:视图引擎默认会返回 text/html 的内容类型和 200 的状态码
 app.use(function(req, res) {
-    res.type('text/plain');
     res.status(404);
-    res.send('404 - Not Found');
+    res.render('404');
 });
 
 
 app.use(function(err, req, res, next) {
     console.error(err.stack);
-    res.type('text/plain');
-    res.status(404);
-    res.send('404 - Not Found');
+    res.status(500);
+    res.render('500');
 });
 
 app.listen(app.get('port'), function() {
